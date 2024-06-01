@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Casino</title>
+    <!-- ======= Bootstrap CDN======== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- ============ Custom Style Sheet========= -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- ============ Responsive Style Sheet========= -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- ================ Font Awesome icons CDN============== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- ================ Bootstrap icons CDN ================== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!--====== Main Header====== -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div
+                    class="col-7 col-sm-8 col-md-9 d-flex flex-column flex-md-row justify-content-between align-items-baseline align-items-md-center gap-2 gap-md-0">
+                    <div>
+                        <a href="index.html">
+                            <img src="assets/images/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="d-flex">
+                        <div class="search-container" id="searchContainer">
+                            <input type="text" id="searchInput" placeholder="Search here">
+                        </div>
+                        <button id="toggleButton"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="col-5 col-sm-4 col-md-3">
+                    <div class="d-flex justify-content-center align-items-center h-100 gap-2">
+                        <div class="d-none d-md-flex flex-column">
+                            <a href="#">Rules</a>
+                            <a href="#">Download Apk <i class="bi bi-android2"></i></a>
+                        </div>
+                        <div>
+                            <p>Balance: <b>1500</b></p>
+                            <p>Exp: <b>0</b></p>
+                        </div>
+                        <div>
+                            <div class="btn-group">
+                                <button type="button" class="btn dropdown-toggle text-white p-0"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Demo <i class="fa-solid fa-angle-down" style="color: #ffffff;"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Account Statement</a></li>
+                                    <li><a class="dropdown-item" href="#">Current Bet</a></li>
+                                    <li><a class="dropdown-item" href="#">Casino Result</a></li>
+                                    <li><a class="dropdown-item" href="#">Set Button Values</a></li>
+                                    <li>
+                                        <div class="form-check">
+                                            <label for="bal">Balance</label>
+                                            <input type="checkbox" name="balance" id="bal">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <label for="exp">Exposure</label>
+                                            <input type="checkbox" name="exposure" id="exp">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">SignOut</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========Sub Header Navigation Bar======== -->
+    <nav class="navbar navbar-expand bg-dark p-0" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="navbar-nav-wrapper">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LOTTERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CRICKET</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TENNIS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FOOTBALL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TABLE TENNIS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BACCARAT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">32 CARDS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TEENPATTI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">POKER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LUCKY 7</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ========= Main Body ========== -->
+    <div class="content">
+        <!-- ======= Aside Bar ======= -->
+        <aside class="d-none d-xl-block">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Racing Sports
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item"><a href="#">Horse Racing</a></li>
+                                <li class="list-group-item"><a href="#">Greyhound Racing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            Others
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item"><a href="#">Our Casino</a></li>
+                                <li class="list-group-item"><a href="#">Our Virtual</a></li>
+                                <li class="list-group-item"><a href="#">Live Casino</a></li>
+                                <li class="list-group-item"><a href="#">Slot Game</a></li>
+                                <li class="list-group-item"><a href="#">Fantasy Game</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            All Sports
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item"><a href="#">Politics</a></li>
+                                <li class="list-group-item"><a href="#">Cricket</a></li>
+                                <li class="list-group-item"><a href="#">Football</a></li>
+                                <li class="list-group-item"><a href="#">Tennis</a></li>
+                                <li class="list-group-item"><a href="#">Table Tennis</a></li>
+                                <li class="list-group-item"><a href="#">Badminton</a></li>
+                                <li class="list-group-item"><a href="#">Esoccer</a></li>
+                                <li class="list-group-item"><a href="#">BasketBall</a></li>
+                                <li class="list-group-item"><a href="#">VolleyBall</a></li>
+                                <li class="list-group-item"><a href="#">Snooker</a></li>
+                                <li class="list-group-item"><a href="#">Ice Hockey</a></li>
+                                <li class="list-group-item"><a href="#">E Games</a></li>
+                                <li class="list-group-item"><a href="#">Futsal</a></li>
+                                <li class="list-group-item"><a href="#">HandBall</a></li>
+                                <li class="list-group-item"><a href="#">Kabaddi</a></li>
+                                <li class="list-group-item"><a href="#">Golf</a></li>
+                                <li class="list-group-item"><a href="#">Rugby League</a></li>
+                                <li class="list-group-item"><a href="#">Boxing</a></li>
+                                <li class="list-group-item"><a href="#">Beach Volleyball</a></li>
+                                <li class="list-group-item"><a href="#">Mixed Martial Arts</a></li>
+                                <li class="list-group-item"><a href="#">MotoGP</a></li>
+                                <li class="list-group-item"><a href="#">Chess</a></li>
+                                <li class="list-group-item"><a href="#">Cycling</a></li>
+                                <li class="list-group-item"><a href="#">Motorbikes</a></li>
+                                <li class="list-group-item"><a href="#">Athletics</a></li>
+                                <li class="list-group-item"><a href="#">BasketBall 3X3</a></li>
+                                <li class="list-group-item"><a href="#">Sumo</a></li>
+                                <li class="list-group-item"><a href="#">Virtual Sports</a></li>
+                                <li class="list-group-item"><a href="#">Baseball</a></li>
+                                <li class="list-group-item"><a href="#">Rugby Union</a></li>
+                                <li class="list-group-item"><a href="#">Darts</a></li>
+                                <li class="list-group-item"><a href="#">American Football</a></li>
+                                <li class="list-group-item"><a href="#">Soccer</a></li>
+                                <li class="list-group-item"><a href="#">Esports</a></li>
+                                <li class="list-group-item"><a href="#">Boat Racing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ========== Main Content======== -->
+        <main>
+            <!-- =========== Game Ad Tab ======== -->
+            <div class="game-ad">
+                <div class="game-tab">
+                    <div>
+                        <img src="assets/images/cricket.png" alt="cricket Logo">
+                    </div>
+                    <div>
+                        <p>
+                            Indian Premier League - 2024
+                        </p>
+                    </div>
+                </div>
+                <div class="game-tab">
+                    <div>
+                        <img src="assets/images/cricket.png" alt="cricket Logo">
+                    </div>
+                    <div>
+                        <p>
+                            Luknow Super Giants V Chennai Super Kings
+                        </p>
+                    </div>
+                </div>
+                <div class="game-tab">
+                    <div>
+                        <img src="assets/images/ball.png" alt="cricket Logo">
+                    </div>
+                    <div>
+                        <p>
+                            Nuno Borges v Corentin Moutet
+                        </p>
+                    </div>
+                </div>
+                <div class="game-tab">
+                    <div>
+                        <img src="assets/images/ball.png" alt="cricket Logo">
+                    </div>
+                    <div>
+                        <p>
+                            Roberto Bautista Agut v Came...
+                        </p>
+                    </div>
+                </div>
+                <div class="game-tab">
+                    <div>
+                        <img src="assets/images/ball.png" alt="cricket Logo">
+                    </div>
+                    <div>
+                        <p>
+                            V Gracheva v Y Yuan
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =========== Game horizontal list Tab ======== -->
+            <div class="games">
+                <ul>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">Cricket</a></li>
+                    <li><a href="#">Football</a></li>
+                    <li><a href="#">Esoccer</a></li>
+                    <li><a href="#">Tennis</a></li>
+                    <li><a href="#">Horse Racing</a></li>
+                    <li><a href="#">Greyhound</a></li>
+                    <li><a href="#">Table Tennis</a></li>
+                    <li><a href="#">BasketBall</a></li>
+                    <li><a href="#">American Football</a></li>
+                    <li><a href="#">VolleyBall</a></li>
+                </ul>
+            </div>
+
+
+            <!-- =========== Game Table ======== -->
+            <div class="game-table">
+                <div class="d-flex justify-content-between border-bottom border-top">
+                    <div class="ps-2 fw-bold">
+                        <p>Game</p>
+                    </div>
+                    <div class="d-flex w-40 justify-content-between text-center">
+                        <div class="w-33 fw-bold">1</div>
+                        <div class="w-33 fw-bold">X</div>
+                        <div class="w-33 fw-bold">2</div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row border-bottom">
+                    <div class="d-flex justify-content-between w-60 ps-2 pe-3">
+                        <p>Ball by Ball</p>
+                        <div class="d-flex gap-3 gap-md-4">
+                            <div><i class="fa-solid fa-circle" style="color: #28a745;"></i></div>
+                            <div><i class="fa-solid fa-display"></i></div>
+                            <div><i class="fa-brands fa-facebook-f"></i></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="d-flex w-40 justify-content-between text-center">
+                        <div class="w-33">
+                            <div class="d-flex position-relative">
+                                <div class="lock"><i class="fa-solid fa-lock" style="color: #ffffff;"></i></div>
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex position-relative">
+                                <div class="lock"><i class="fa-solid fa-lock" style="color: #ffffff;"></i></div>
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row border-bottom">
+                    <div class="d-flex justify-content-between w-60 ps-2 pe-3">
+                        <p>JT XI v BT XI 24/04/2024 14:20:00</p>
+                        <div class="d-flex gap-3 gap-md-4">
+                            <div><i class="fa-solid fa-circle" style="color: #28a745;"></i></div>
+                            <div></div>
+                            <div><i class="fa-brands fa-facebook-f"></i></div>
+                            <div><img src="assets/images/Bm-icon.png" alt="BM"></div>
+                            <div><img src="assets/images/tash-img.png" alt="tash"></div>
+                        </div>
+                    </div>
+                    <div class="d-flex w-40 justify-content-between text-center">
+                        <div class="w-33">
+                            <div class="d-flex position-relative">
+                                <div class="lock"><i class="fa-solid fa-lock" style="color: #ffffff;"></i></div>
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex position-relative">
+                                <div class="lock"><i class="fa-solid fa-lock" style="color: #ffffff;"></i></div>
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row border-bottom">
+                    <div class="d-flex justify-content-between w-60 ps-2 pe-3">
+                        <p>Southern Vipers v Central Sparks 24/04/2024 14:30:00
+                        </p>
+                        <div class="d-flex gap-3 gap-md-4">
+                            <div><i class="fa-solid fa-circle" style="color: #28a745;"></i></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="d-flex w-40 justify-content-between text-center">
+                        <div class="w-33">
+                            <div class="d-flex position-relative">
+                                <div class="lock"><i class="fa-solid fa-lock" style="color: #ffffff;"></i></div>
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex position-relative">
+                                <div class="lock"><i class="fa-solid fa-lock" style="color: #ffffff;"></i></div>
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row border-bottom">
+                    <div class="d-flex justify-content-between w-60 ps-2 pe-3">
+                        <p>Northern Diamonds v Western Storm 24/04/2024 14:30:00
+                        </p>
+                        <div class="d-flex gap-3 gap-md-4">
+                            <div><i class="fa-solid fa-circle" style="color: #28a745;"></i></div>
+                            <div></div>
+                            <div><i class="fa-brands fa-facebook-f"></i></div>
+                            <div></div>
+                            <div><img src="assets/images/tash-img.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="d-flex w-40 justify-content-between text-center">
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row border-bottom">
+                    <div class="d-flex justify-content-between w-60 ps-2 pe-3">
+                        <p>Pakistan T10 v Sri Lanka T10 24/04/2024 15:05:00</p>
+                        <div class="d-flex gap-3 gap-md-4">
+                            <div></div>
+                            <div></div>
+                            <div><i class="fa-brands fa-facebook-f"></i></div>
+                            <div><img src="assets/images/Bm-icon.png" alt="BM"></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="d-flex w-40 justify-content-between text-center">
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row border-bottom">
+                    <div class="d-flex justify-content-between w-60 ps-2 pe-3">
+                        <p>The Blaze v South East Stars 24/04/2024 14:30:00</p>
+                        <div class="d-flex gap-3 gap-md-4">
+                            <div><i class="fa-solid fa-circle" style="color: #28a745;"></i></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="d-flex w-40 justify-content-between text-center">
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row border-bottom">
+                    <div class="d-flex justify-content-between w-60 ps-2 pe-3">
+                        <p>New Zealand T10 v Australia T10 24/04/2024 14:35:00</p>
+                        <div class="d-flex gap-3 gap-md-4">
+                            <div><i class="fa-solid fa-circle" style="color: #28a745;"></i></div>
+                            <div><i class="fa-solid fa-display"></i></div>
+                            <div><i class="fa-brands fa-facebook-f"></i></div>
+                            <div><img src="assets/images/Bm-icon.png" alt="BM"></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="d-flex w-40 justify-content-between text-center">
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row border-bottom">
+                    <div class="d-flex justify-content-between w-60 ps-2 pe-3">
+                        <p>West Indies T10 v India T10 24/04/2024 14:45:00</p>
+                        <div class="d-flex gap-3 gap-md-4">
+                            <div><i class="fa-solid fa-circle" style="color: #28a745;"></i></div>
+                            <div><i class="fa-solid fa-display"></i></div>
+                            <div><i class="fa-brands fa-facebook-f"></i></div>
+                            <div><img src="assets/images/Bm-icon.png" alt="BM"></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="d-flex w-40 justify-content-between text-center">
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row border-bottom">
+                    <div class="d-flex justify-content-between w-60 ps-2 pe-3">
+                        <p>Adelaide Striker XI v Melbourne Stars XI 24/04/2024 15:00:00</p>
+                        <div class="d-flex gap-3 gap-md-4">
+                            <div><i class="fa-solid fa-circle" style="color: #28a745;"></i></div>
+                            <div><i class="fa-solid fa-display"></i></div>
+                            <div><i class="fa-brands fa-facebook-f"></i></div>
+                            <div><img src="assets/images/Bm-icon.png" alt="BM"></div>
+                            <div><img src="assets/images/game-icon.png" alt="Console"></div>
+                        </div>
+                    </div>
+                    <div class="d-flex w-40 justify-content-between text-center">
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row border-bottom">
+                    <div class="d-flex justify-content-between w-60 ps-2 pe-3">
+                        <p>Indian Premier League 01/03/2024 16:00:00</p>
+                        <div class="d-flex gap-3 gap-md-4">
+                            <div></div>
+                            <div><i class="fa-solid fa-display"></i></div>
+                            <div><i class="fa-brands fa-facebook-f"></i></div>
+                            <div></div>
+                            <div><img src="assets/images/game-icon.png" alt="Console"></div>
+                        </div>
+                    </div>
+                    <div class="d-flex w-40 justify-content-between text-center">
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                        <div class="w-33">
+                            <div class="d-flex">
+                                <div class="blue w-50 h-100">-</div>
+                                <div class="red w-50 h-100">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <!-- =========== Game Cards ======== -->
+            <div class="d-flex justify-content-center flex-wrap gap-2">
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/10poker.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/11poker20.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/12poker6.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/13baccarat.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/14baccarat2.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/15dt20.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/16dt6.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/17dtl20.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/18dt202.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/19card32.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/20card32eu.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/21ab20.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/22abj.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/23lucky7.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/24lucky7eu.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/253cardj.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/26war.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/27worli.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/28worli2.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/29aaa.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/30btable.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/31lottcard.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/32cricketv3.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/33cmatch20.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/34cmeter.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/35teen6.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/36queen.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/37race20 (1).jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/38lucky7eu2.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/39superover.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/3sicbo.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/40trap.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/41patti2.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/42teensin.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/43teenmuf.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/44race17.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/45teen20b.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/46notenum.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/47teen120.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/48teen1.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/49roulette.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/4teen32.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/50ab3.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/51aaa2.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/52race2.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/53teen3.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/54dum10.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/55cmeter1.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/5roulette1.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/6teen.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/7teen20.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/8teen9.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/9teen8.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/ballbyball.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/kbc.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/teen33.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="img-links">
+                    <a href="#">
+                        <img src="assets/images/trio.jpg" alt="img">
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+    <!-- =========== Footer ========== -->
+    <footer>
+        <div class="social">
+            <h2>24X7 Support</h2>
+            <div class="social-icons-box">
+                <div class="social-icon">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+                <div class="social-icon">
+                    <a href="#">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                </div>
+                <div class="social-icon">
+                    <a href="#">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                </div>
+                <div class="social-icon">
+                    <a href="#">
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div
+            class="secure d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 gap-sm-0 p-3">
+            <div class="d-flex justify-content-center align-items-center gap-3 m-0">
+                <img src="assets/images/ssl.png" alt="SSL">
+                <div>
+                    <p>100% SAFE</p>
+                    <p>Protected connection and encrypted data.</p>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <div>
+                    <img src="assets/images/18plus.png" alt="">
+                </div>
+                <div>
+                    <img src="assets/images/gamecare.png" alt="">
+                </div>
+                <div>
+                    <img src="assets/images/gt.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3">
+            <p> © Copyright 2024. All Rights Reserved. Powered by D247. </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

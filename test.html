@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Casino</title>
+    <!-- ======= Bootstrap CDN======== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- ============ Custom Style Sheet========= -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- ============ Responsive Style Sheet========= -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- ================ Font Awesome icons CDN============== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- ================ Bootstrap icons CDN ================== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        /* Basic styles for the container and button */
+        .position-relative {
+            position: relative;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        /* Initial state of the search container */
+        .search-container {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            width: 0;
+            overflow: hidden;
+            transition: width 0.3s ease-out;
+        }
+
+        /* Expanded state of the search container */
+        .search-container.expanded {
+            width: 200px;
+            /* Set your desired width here */
+        }
+
+        /* Input styling */
+        #searchInput {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Style for the button to appear next to the input */
+        #toggleButton {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="position-relative inline-block">
+        <button id="toggleButton"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+        <div class="search-container" id="searchContainer">
+            <input type="text" id="searchInput" placeholder="Search here">
+        </div>
+    </div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.getElementById('toggleButton');
+            const searchContainer = document.getElementById('searchContainer');
+            const container = toggleButton.parentElement;
+
+            toggleButton.addEventListener('click', function () {
+                // Check if the search bar is already expanded
+                if (searchContainer.classList.contains('expanded')) {
+                    // Collapse the search bar
+                    searchContainer.classList.remove('expanded');
+                    container.style.width = 'auto';
+                } else {
+                    // Expand the search bar
+                    searchContainer.classList.add('expanded');
+
+                    // Calculate required width and adjust container's width to prevent overflow
+                    const containerRect = container.getBoundingClientRect();
+                    const searchWidth = 200; // Should match the width in CSS
+                    const availableSpace = window.innerWidth - containerRect.left;
+
+                    if (availableSpace < searchWidth) {
+                        container.style.width = searchWidth + 'px';
+                        container.style.position = 'absolute';
+                        container.style.right = 0;
+                    }
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

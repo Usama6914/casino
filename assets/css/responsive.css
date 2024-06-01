@@ -1,0 +1,43 @@
+@media (max-width: 1200px) {
+    main {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header img {
+        width: 100px;
+    }
+
+    header #toggleButton i {
+        font-size: 20px;
+    }
+
+    header #searchContainer input {
+        height: 20px;
+    }
+
+    header #searchContainer.expanded {
+        width: 10em;
+        /* Adjust the width as needed */
+    }
+
+    main .game-table .w-40 {
+        width: 100%;
+    }
+
+    main .game-table .w-60 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 460px) {
+    footer .social .social-icons-box {
+        position: unset;
+    }
+
+    footer .social .social-icons-box .social-icon .fa-brands {
+        font-size: 20px;
+    }
+}

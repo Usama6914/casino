@@ -1,0 +1,422 @@
+/* =========Universal Style======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+i {
+    font-size: 14px;
+}
+
+/* =========== header ============= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 10px;
+    background-color: #0088CC;
+}
+
+header a {
+    color: white;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+header p {
+    color: white;
+}
+
+header img {
+    width: 150px;
+}
+
+header #toggleButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin-left: 10px;
+    height: fit-content;
+}
+
+header #toggleButton i {
+    font-size: 25px;
+}
+
+header #searchContainer {
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s ease;
+}
+
+header #searchContainer input {
+    width: 100%;
+    height: 30px;
+    padding: 0 1em;
+    border-radius: 5px;
+    border: none;
+}
+
+header #searchContainer.expanded {
+    width: 15em;
+    /* Adjust the width as needed */
+}
+
+header .dropdown-menu {
+    padding: 1em;
+}
+
+header .dropdown-item {
+    padding: 6px 12px;
+    color: #000;
+    transition: .5s ease;
+    cursor: pointer;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    clear: both;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+}
+
+header .btn.dropdown-toggle::after {
+    content: none !important;
+    /* Ensure no content is displayed */
+    display: none !important;
+    /* Ensure the pseudo-element is not displayed */
+}
+
+header .form-check {
+    padding: 6px 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* ============ Navbar =========== */
+
+.navbar-nav-wrapper {
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling for iOS */
+}
+
+.navbar-nav {
+    display: flex;
+    white-space: nowrap;
+    /* Prevent wrapping */
+}
+
+.nav-item {
+    display: inline-block;
+    /* Ensure items are displayed inline */
+}
+
+/* Hide scrollbar */
+.navbar-nav-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar-nav-wrapper {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.navbar .nav-link {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* ============ Main Body ============ */
+
+.content {
+    display: flex;
+}
+
+
+/* ========== Aside Bar ============ */
+.content {
+    padding: 5px 0;
+}
+
+.content aside {
+    width: 240px;
+}
+
+.content aside .accordion-item {
+    border: none;
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.5 3a.5.5 0 0 1 .707 0L8 8.793l5.793-5.793a.5.5 0 0 1 .707.707l-6 6a.5.5 0 0 1-.707 0l-6-6A.5.5 0 0 1 1.5 3z'/%3E%3C/svg%3E%0A") !important;
+}
+
+.content aside .accordion-button {
+    background-color: #0088CC;
+    color: white;
+    padding: 10px;
+    border-radius: 0 !important;
+}
+
+.content aside .accordion-button:focus {
+    box-shadow: none;
+}
+
+.content aside .accordion-body {
+    padding: 0;
+    border: none;
+}
+
+.content aside .accordion-body ul li {
+    background-color: #BBBBBB;
+    border-bottom: 1px solid gray;
+    border-radius: 0;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+
+/* ========= Main Content ======== */
+main {
+    width: calc(100% - 240px);
+    padding: 0 10px;
+}
+
+/*================ Game AD Tabs============= */
+main .game-ad {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+}
+
+main .games::-webkit-scrollbar,
+main .game-ad::-webkit-scrollbar {
+    display: none;
+}
+
+main .game-ad .game-tab {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #2C3E50;
+    color: white;
+    padding: 5px;
+    width: 233px;
+    height: 31px;
+    border-radius: 5px;
+}
+
+main .game-ad .game-tab p {
+    width: 190px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+main .game-ad .game-tab div:first-child {
+    width: 18px;
+    height: 16px;
+    line-height: 1.2;
+}
+
+main .game-ad .game-tab div:first-child img {
+    width: 100%;
+    height: 100%;
+}
+
+/*================ Game Horizontal List Tabs============= */
+main .games {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+}
+
+main .games ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+main .games ul li {
+    background-color: #CCCCCC;
+    padding: 5px 20px;
+    color: black;
+    position: relative;
+    text-wrap: nowrap;
+    /* border-right: 1px solid; */
+}
+
+main .games ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 100%;
+    /* Adjust height as needed */
+    background-color: black;
+    /* Adjust color as needed */
+}
+
+/*================ Game Table============= */
+
+main .game-table {
+    margin-bottom: 20px;
+}
+
+main .game-table .w-33 {
+    width: 33%;
+}
+
+main .game-table .w-40 {
+    width: 40%;
+}
+
+main .game-table .w-60 {
+    width: 60%;
+}
+
+main .game-table .lock {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+main .game-table .blue {
+    border: none;
+    background-color: #add8e6;
+    padding: 0px 30px;
+    text-align: center;
+}
+
+main .game-table .red {
+    border: none;
+    background-color: #ffb6c1;
+    padding: 0px 30px;
+    text-align: center;
+}
+
+main .game-table .icon {
+    width: 20px;
+    height: 20px;
+}
+
+main .game-table .gap-3 div {
+    width: 16px;
+}
+
+main .game-table .gap-3 div img {
+    width: 100%;
+    /* height: 100%; */
+}
+
+/*================ Game Cards============= */
+main .img-links {
+    width: 110px;
+    height: 110px;
+}
+
+main .img-links img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+footer .social {
+    position: relative;
+    color: white;
+    background-color: #0088CC;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .social .social-icons-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    margin-right: 10px;
+}
+
+footer .social .social-icons-box .social-icon {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 4px 4px 2px;
+}
+
+footer .social .social-icons-box .social-icon .fa-brands {
+    font-size: 30px;
+}
+
+footer .social .social-icons-box .social-icon .fa-facebook {
+    color: #3b5998;
+}
+
+footer .social .social-icons-box .social-icon .fa-square-instagram {
+    color: #ee2a7b;
+}
+
+footer .social .social-icons-box .social-icon .fa-telegram {
+    color: #229ED9;
+}
+
+footer .social .social-icons-box .social-icon .fa-square-twitter {
+    color: #1DA1F2;
+}
+
+
+footer .secure img {
+    width: 100px;
+}
+
+footer .secure .m-0 div p:first-child {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+footer .secure .m-0 div p:last-child {
+    font-size: 16px;
+}
+
+footer .secure .gap-2 img {
+    width: 30px;
+}
+
+footer .text-center p {
+    font-size: 16px;
+    font-weight: 600;
+}
